@@ -1,43 +1,32 @@
-# React + Vite
+# IELTS Institute — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small, polished frontend for a fictional IELTS coaching site (React + Vite + Tailwind).
 
-Currently, two official plugins are available:
+## Setup (quick)
+1. Install dependencies:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+```
 
-## React Compiler
+2. Start the dev server:
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Open the local URL shown in the terminal (usually `http://localhost:5173`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Build for production:
 
-# IELTS Institute Homepage
+```bash
+npm run build
+```
 
-A modern, professional, and responsive homepage for a fictional IELTS Institute built with React, Vite, and Tailwind CSS.
+## Design choices (short)
+- Fonts: Inter for readable UI text, Montserrat for bold headings — modern, clean, and friendly.
+- Hero: semantic header, clear primary CTA and a helpful secondary CTA, and a lazy-loaded image to avoid layout shift.
+- Accessibility: simple semantic markup and visible focus styles so keyboard users are supported.
+- Visual style: subtle accents (soft gradients, small sparkles) to make the UI feel polished without distracting from content.
 
-## Setup Instructions
-
-1. **Install dependencies:**
-   ```zsh
-   npm install
-   ```
-2. **Start development server:**
-   ```zsh
-   npm run dev
-   ```
-
-## Design Choices
-
-- **Color Scheme:** Blue & white for a clean, trustworthy, and professional look.
-- **Layout:** Responsive design using Tailwind's grid and flex utilities for mobile and desktop.
-- **Tailwind Usage:** Utility classes for spacing, colors, shadows, and hover effects. Custom blue shades for branding.
-- **Components:** UI split into reusable components (Navbar, Hero, Features, Testimonials, Footer).
-- **Modern Feel:** Hover animations, rounded corners, and shadow effects for cards and buttons.
-
----
-
-Feel free to customize content and styles for your own institute!
+That's it — simple setup and a few intentional design decisions to keep the UI modern, accessible, and easy to extend.
