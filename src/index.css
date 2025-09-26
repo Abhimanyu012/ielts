@@ -1,1 +1,66 @@
 @import "tailwindcss";
+
+/* Global font stack: Inter for UI/body, Poppins as friendly fallback, Montserrat for headings */
+body {
+  font-family: 'Inter', 'Poppins', 'Montserrat', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'sans-serif';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f1f5f9; /* Tailwind slate-100 */
+  background: #0a0f1c;
+}
+
+/* Headings: use Montserrat for a strong, modern display style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Poppins', 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'sans-serif';
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #f1f5f9; /* Tailwind slate-100 */
+  text-transform: uppercase;
+}
+
+/* Body copy and form elements use Inter for legibility */
+p, li, label, input, textarea, button {
+  font-family: 'Inter', 'Poppins', 'Montserrat', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'sans-serif';
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #f1f5f9; /* Tailwind slate-100 */
+  text-transform: none;
+}
+
+/* Buttons and nav: slightly heavier */
+nav a, .btn, button, .uppercase {
+  text-transform: uppercase;
+  font-family: 'Montserrat', 'Poppins', 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'sans-serif';
+  font-weight: 600;
+}
+
+::selection {
+  background: #2563eb;
+  color: #fff;
+}
+
+@keyframes sparkleMove {
+  0% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-10px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.7; }
+}
+.animate-sparkle circle {
+  animation: sparkleMove 6s linear infinite alternate;
+}
+
+@keyframes sparkle {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+  50% { transform: scale(1.4) rotate(20deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+}
+.animate-sparkle {
+  animation: sparkle 2.5s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); box-shadow: 0 0 12px 4px #ffd70044; }
+}
+.animate-twinkle {
+  animation: twinkle 2.5s infinite ease-in-out;
+}
